@@ -7,8 +7,8 @@ services:
     replica: 5
     placement:
     constraints: [node.role==worker]
-  ports:
-    - "8000:8080"
+    ports:
+      - "8000:8080"
   visualizer:
     image: dockersamples/visualizer:stable
     ports:
