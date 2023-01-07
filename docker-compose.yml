@@ -2,19 +2,19 @@ version: "1.0"
  
 services:
      nginx:
-     image: nginx
-     deploy:
-      replica: 5
-      placemnent:
-        constraints: [node.role==worker]
-     ports: 
-      - 8000:8080
+         image: nginx
+         deploy:
+         replica: 5
+         placemnent:
+         constraints: [node.role==worker]
+         ports: 
+            - 8000:8080
     visualizer:
-     image: dockersamples/visualizer:stable
-     ports: 
-     - "8000:8080"
-     volumes:
-     - "/var/run/docker.sock:/var/run/docker.sock"
-     deploy:       
-       placement:
-         constraints: [node.role == manager]
+             image: dockersamples/visualizer:stable
+             ports: 
+               - "8000:8080"
+             volumes:
+               - "/var/run/docker.sock:/var/run/docker.sock"
+             deploy:       
+             placement:
+             constraints: [node.role == manager]
