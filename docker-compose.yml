@@ -4,9 +4,9 @@ services:
   site:
     image: nginx
     deploy:
-    replicas: 5
-    placement:
-    constraints: [node.role==worker]
+      replicas: 5
+      placement:
+        constraints: [node.role==worker]
     ports:
       - "8000:8080"
   visualizer:
