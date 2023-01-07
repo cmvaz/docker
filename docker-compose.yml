@@ -1,15 +1,15 @@
 version: "1.0"
  
 services:
-  site:
-    image: nginx
-    deploy:
+     nginx:
+     image: nginx
+     deploy:
       replica: 5
       placemnent:
         constraints: [node.role==worker]
-    ports: 
+     ports: 
           - 8000:8080
-   visualizer:
+    visualizer:
      image: dockersamples/visualizer:stable
      ports: 
      - "8000:8080"
