@@ -8,11 +8,11 @@ services:
       placement:
         constraints: [node.role==worker]
     ports:
-      - "8000:8080"
+      - "8000:80"
   visualizer:
     image: dockersamples/visualizer:stable
     ports:
-      - "8000:8080"
+      - "8888:8080"
     volumes:
       - "/var/run/docker.sock:/var/run/docker.sock"
     deploy:
