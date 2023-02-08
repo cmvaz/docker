@@ -4,7 +4,7 @@ services:
   site:
     image: nginx
     deploy:
-      replicas: 5
+      replicas: 8
       placement:
         constraints: [node.role==worker]
     ports:
