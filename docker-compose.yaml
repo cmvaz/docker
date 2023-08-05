@@ -1,0 +1,30 @@
+version: '3'
+
+services:
+  web_replica_1:
+    image: nginx:latest
+    ports:
+      - "8080:80"
+    volumes:
+      - ./web_files:/usr/share/nginx/html
+
+  web_replica_2:
+    image: nginx:latest
+    ports:
+      - "8081:80"
+    volumes:
+      - ./web_files:/usr/share/nginx/html
+
+  web_replica_3:
+    image: nginx:latest
+    ports:
+      - "8082:80"
+    volumes:
+      - ./web_files:/usr/share/nginx/html
+
+  web_replica_4:
+    image: nginx:latest
+    ports:
+      - "8083:80"
+    volumes:
+      - ./web_files:/usr/share/nginx/html
