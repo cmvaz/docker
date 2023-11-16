@@ -1,7 +1,7 @@
 version: "3.8"
 
 services:
-  site1:
+  site2:
     image: nginx
     deploy:
       replicas: 8
