@@ -1,7 +1,7 @@
 version: '3'
 
 services:
-  web_replica_1:
+  web_replica_10:
     image: nginx:latest
     ports:
       - "8080:80"
